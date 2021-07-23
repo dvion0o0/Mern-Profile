@@ -5,5 +5,4 @@ const router = express.Router()
 // @desc    Tests profile route
 // @access  Public
 router.get('/', (req, res) => res.json({ msg: 'Posts Works' }))
-
 module.exports = router

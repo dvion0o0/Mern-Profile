@@ -4,7 +4,7 @@ const bodYParser = require('body-parser')
 const users = require('./routes/users')
 const profile = require('./routes/profile')
 const posts = require('./routes/posts')
-
+const auth = require('./routes/auth')
 const app = express()
 
 mongoose
@@ -20,6 +20,7 @@ app.use(express.json({ extended: false }))
 app.use('/users', users)
 app.use('/profile', profile)
 app.use('/posts', posts)
+app.use('/auth', auth)
 
 app.listen(5000, () => {
   console.log('server started on port 5000')
